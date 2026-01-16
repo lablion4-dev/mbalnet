@@ -1,8 +1,8 @@
-# MBAALNET.COM - Site Web Professionnel
+# MBALNET.COM - Site Web Professionnel
 
 ## 🌍 À Propos
 
-**MBAAL.COM** est le site web officiel de **ETS MBA & AL**, une entreprise camerounaise spécialisée dans:
+**MBALNET.COM** est le site web officiel de **ETS MBA & AL**, une entreprise camerounaise spécialisée dans:
 - Commerce général
 - Import-Export
 - Négoce et intermédiation d'affaires
@@ -299,7 +299,7 @@ Le site inclut un sélecteur de langue élégant avec support pour **7 langues**
 
 ## 📝 Licence
 
-© 2026 MBAAL.COM - ETS MBA & AL. Tous droits réservés.
+© 2026 MBALNET.COM - ETS MBA & AL. Tous droits réservés.
 
 ---
 
@@ -340,4 +340,4 @@ Pour toute amélioration ou suggestion:
 
 ---
 
-**Développé avec ❤️ pour MBAALNET - Connecting African Products to Global Markets**
+**Développé avec ❤️ pour MBALNET - Connecting African Products to Global Markets**

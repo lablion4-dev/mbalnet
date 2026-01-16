@@ -1,5 +1,5 @@
 // ===================================
-// MBAAL.COM - JavaScript Interactif
+// MBALNET.COM - JavaScript Interactif
 // ===================================
 
 document.addEventListener('DOMContentLoaded', function() {
