@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages & Commandes - MBAAL Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="admin-sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <i class="fas fa-leaf"></i>
+                <span>MBAAL</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="products.html">
+                        <i class="fas fa-box"></i>
+                        <span>Produits</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="content.html">
+                        <i class="fas fa-edit"></i>
+                        <span>Contenu</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="messages.html">
+                        <i class="fas fa-envelope"></i>
+                        <span>Messages</span>
+                        <span class="nav-badge" id="messages-badge">0</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="analytics.html">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Analytics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="orders.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Commandes</span>
+                        <span class="nav-badge" id="orders-badge">0</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="users.html">
+                        <i class="fas fa-users"></i>
+                        <span>Utilisateurs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html">
+                        <i class="fas fa-cog"></i>
+                        <span>Paramètres</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="user-details">
+                    <span class="user-name">Admin MBAAL</span>
+                    <span class="user-role">Administrateur</span>
+                </div>
+            </div>
+            <button class="logout-btn" onclick="logout()">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Déconnexion</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="admin-main">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="header-left">
+                <h1><i class="fas fa-envelope"></i> Messages & Commandes</h1>
+                <p>Gérez vos messages et demandes clients</p>
+            </div>
+            <div class="header-right">
+                <div class="header-notifications">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-count">3</span>
+                    </button>
+                </div>
+                <div class="header-user">
+                    <div class="user-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="admin-content">
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="total-count">0</h3>
+                        <p>Total Messages</p>
+                    </div>
+                    <div class="stat-change positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>+12%</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon urgent">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="nouveau-count">0</h3>
+                        <p>Nouveaux</p>
+                    </div>
+                    <div class="stat-change negative">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>+5</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="urgent-count">0</h3>
+                        <p>Urgents</p>
+                    </div>
+                    <div class="stat-change">
+                        <i class="fas fa-minus"></i>
+                        <span>-2</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 id="today-count">0</h3>
+                        <p>Aujourd'hui</p>
+                    </div>
+                    <div class="stat-change positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>+8</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters & Actions -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Messages Reçus</h2>
+                    <div class="section-actions">
+                        <button class="btn btn-primary" id="compose-message-btn">
+                            <i class="fas fa-plus"></i>
+                            Nouveau Message
+                        </button>
+                        <div class="export-actions">
+                            <button class="btn btn-outline-secondary export-messages-btn" data-format="csv">
+                                <i class="fas fa-download"></i>
+                                CSV
+                            </button>
+                            <button class="btn btn-outline-secondary export-messages-btn" data-format="excel">
+                                <i class="fas fa-download"></i>
+                                Excel
+                            </button>
+                            <button class="btn btn-outline-secondary export-messages-btn" data-format="pdf">
+                                <i class="fas fa-download"></i>
+                                PDF
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters-bar">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="message-search" placeholder="Rechercher dans les messages...">
+                    </div>
+
+                    <div class="filter-group">
+                        <select id="status-filter" class="form-select">
+                            <option value="all">Tous les statuts</option>
+                            <option value="nouveau">Nouveaux</option>
+                            <option value="lu">Lus</option>
+                            <option value="repondu">Répondus</option>
+                            <option value="archive">Archivés</option>
+                        </select>
+
+                        <select id="type-filter" class="form-select">
+                            <option value="all">Tous les types</option>
+                            <option value="contact">Contact</option>
+                            <option value="devis">Demande de devis</option>
+                            <option value="partenariat">Partenariat</option>
+                            <option value="commande">Commande</option>
+                            <option value="support">Support</option>
+                        </select>
+
+                        <select id="date-filter" class="form-select">
+                            <option value="all">Toutes les dates</option>
+                            <option value="today">Aujourd'hui</option>
+                            <option value="yesterday">Hier</option>
+                            <option value="week">Cette semaine</option>
+                            <option value="month">Ce mois</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Bulk Actions -->
+                <div class="bulk-actions">
+                    <div class="bulk-select">
+                        <label>
+                            <input type="checkbox" id="select-all-messages">
+                            Tout sélectionner
+                        </label>
+                    </div>
+                    <div class="bulk-controls">
+                        <select id="bulk-status" class="form-select">
+                            <option value="">Actions groupées</option>
+                            <option value="mark-read">Marquer comme lu</option>
+                            <option value="mark-unread">Marquer comme non lu</option>
+                            <option value="archive">Archiver</option>
+                            <option value="delete">Supprimer</option>
+                            <option value="priority-high">Priorité haute</option>
+                            <option value="priority-urgent">Priorité urgente</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Messages List -->
+                <div class="messages-container">
+                    <div id="messages-list" class="messages-list">
+                        <!-- Messages will be loaded here -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="pagination-container">
+                        <div id="pagination-info" class="pagination-info"></div>
+                        <ul id="messages-pagination" class="pagination">
+                            <!-- Pagination will be loaded here -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Details Modal -->
+    <div id="message-details-modal" class="modal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h3>Détails du Message</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="message-details">
+                    <div class="message-info-grid">
+                        <div class="info-group">
+                            <label>Expéditeur:</label>
+                            <span id="modal-sender"></span>
+                        </div>
+                        <div class="info-group">
+                            <label>Email:</label>
+                            <span id="modal-email"></span>
+                        </div>
+                        <div class="info-group">
+                            <label>Téléphone:</label>
+                            <span id="modal-phone"></span>
+                        </div>
+                        <div class="info-group">
+                            <label>Entreprise:</label>
+                            <span id="modal-company"></span>
+                        </div>
+                        <div class="info-group">
+                            <label>Type:</label>
+                            <span id="modal-type" class="badge"></span>
+                        </div>
+                        <div class="info-group">
+                            <label>Priorité:</label>
+                            <span id="modal-priority" class="badge"></span>
+                        </div>
+                        <div class="info-group">
+                            <label>Date:</label>
+                            <span id="modal-date"></span>
+                        </div>
+                        <div class="info-group" id="order-value-section" style="display: none;">
+                            <label>Valeur commande:</label>
+                            <span id="modal-order-value"></span>
+                        </div>
+                    </div>
+
+                    <div class="message-content-section">
+                        <h4 id="modal-subject"></h4>
+                        <div class="message-text" id="modal-message"></div>
+                    </div>
+
+                    <div id="products-section" style="display: none;">
+                        <h4>Produits commandés:</h4>
+                        <p id="modal-products"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-secondary" onclick="closeModal('message-details-modal')">
+                    Fermer
+                </button>
+                <button class="btn btn-primary quick-reply">
+                    <i class="fas fa-reply"></i>
+                    Répondre
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Composer Modal -->
+    <div id="message-composer" class="modal">
+        <div class="modal-content large">
+            <div class="modal-header">
+                <h3>Nouveau Message</h3>
+                <button class="modal-close" id="cancel-compose-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="message-form" class="message-form">
+                    <div class="form-group">
+                        <label for="message-to">Destinataire *</label>
+                        <input type="email" id="reply-to" name="to" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-subject">Sujet *</label>
+                        <input type="text" id="reply-subject" name="subject" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-content">Message *</label>
+                        <textarea name="message" class="form-control" rows="8" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-attachment">Pièces jointes</label>
+                        <input type="file" id="message-attachment" name="attachment" class="form-control" multiple>
+                        <small class="form-text">Formats acceptés: PDF, DOC, XLS, JPG, PNG (max 10MB)</small>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-secondary" id="cancel-compose-btn">
+                    Annuler
+                </button>
+                <button class="btn btn-primary" id="send-message-btn">
+                    <i class="fas fa-paper-plane"></i>
+                    Envoyer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/messages.js"></script>
+</body>
+</html>

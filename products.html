@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez nos produits africains de qualité - Farines, épices, céréales et produits transformés">
+    <title>Nos Produits - MBAAL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <!-- Logo à gauche -->
+                    <div class="logo">
+                        <h1>MBAALNET<span>.COM</span></h1>
+                        <p class="tagline">ETS MBA & AL</p>
+                    </div>
+
+                    <!-- Menu central -->
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="activities.html">Activités</a></li>
+                        <li><a href="products.html" class="active">Produits</a></li>
+                        <li><a href="sourcing.html">Sourcing</a></li>
+                        <li><a href="import-export.html">Import-Export</a></li>
+                        <li><a href="partners.html">Partenaires</a></li>
+                    </ul>
+
+                    <!-- Boutons à droite -->
+                    <div class="nav-right">
+                        <a href="contact.html" class="btn-contact">Contact</a>
+                        <div class="lang-dropdown">
+                            <button class="lang-btn active" data-lang="fr">
+                                <span class="flag">🇫🇷</span>
+                                <span class="lang-text">Français</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="lang-menu">
+                                <a href="#" class="lang-option active" data-lang="fr">
+                                    <span class="flag">🇫🇷</span>
+                                    <span class="lang-text">Français</span>
+                                </a>
+                                <a href="#" class="lang-option" data-lang="en">
+                                    <span class="flag">🇬🇧</span>
+                                    <span class="lang-text">English</span>
+                                </a>
+                                <a href="#" class="lang-option" data-lang="es">
+                                    <span class="flag">🇪🇸</span>
+                                    <span class="lang-text">Español</span>
+                                </a>
+                                <a href="#" class="lang-option" data-lang="ar">
+                                    <span class="flag">🇸🇦</span>
+                                    <span class="lang-text">العربية</span>
+                                </a>
+                                <a href="#" class="lang-option" data-lang="zh">
+                                    <span class="flag">🇨🇳</span>
+                                    <span class="lang-text">中文</span>
+                                </a>
+                                <a href="#" class="lang-option" data-lang="ru">
+                                    <span class="flag">🇷🇺</span>
+                                    <span class="lang-text">Русский</span>
+                                </a>
+                                <a href="#" class="lang-option" data-lang="pt">
+                                    <span class="flag">🇵🇹</span>
+                                    <span class="lang-text">Português</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Menu mobile -->
+                    <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Nos Produits</h1>
+            <p>Découvrez notre sélection de produits africains d'excellence</p>
+        </div>
+    </section>
+
+    <!-- Filtres de Produits -->
+    <section class="product-filters">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Tous les produits</button>
+                <button class="filter-btn" data-filter="farines">Farines Locales</button>
+                <button class="filter-btn" data-filter="epices">Épices & Condiments</button>
+                <button class="filter-btn" data-filter="cereales">Céréales & Riz</button>
+                <button class="filter-btn" data-filter="transformes">Produits Transformés</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalogue de Produits -->
+    <section class="products-catalog">
+        <div class="container">
+            <!-- Farines Locales -->
+            <div id="farines" class="category-section">
+                <h2 class="category-title"><i class="fas fa-wheat"></i> Farines Locales</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="farines">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <span class="product-badge">Origine Cameroun</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Farine de Manioc</h3>
+                            <p class="product-origin"><i class="fas fa-map-marker-alt"></i> Cameroun</p>
+                            <p class="product-description">Farine de manioc de qualité supérieure, sans gluten, idéale pour la pâtisserie et la cuisine traditionnelle.</p>
+                            <div class="product-details">
+                                <p><strong>Conditionnement:</strong> Sacs de 25kg, 50kg</p>
+                                <p><strong>MOQ:</strong> 1 tonne</p>
+                                <p><strong>Export:</strong> Disponible</p>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-small">Demander un devis</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="farines">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-corn"></i>
+                            </div>
+                            <span class="product-badge">Bio disponible</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Farine de Maïs</h3>
+                            <p class="product-origin"><i class="fas fa-map-marker-alt"></i> Cameroun</p>
+                            <p class="product-description">Farine de maïs finement moulue, riche en nutriments, parfaite pour diverses préparations culinaires.</p>
+                            <div class="product-details">
+                                <p><strong>Conditionnement:</strong> Sacs de 25kg, 50kg</p>
+                                <p><strong>MOQ:</strong> 1 tonne</p>
+                                <p><strong>Export:</strong> Disponible</p>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-small">Demander un devis</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="farines">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <span class="product-badge">Nouveau</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Farine de Plantain</h3>
+                            <p class="product-origin"><i class="fas fa-map-marker-alt"></i> Cameroun</p>
+                            <p class="product-description">Farine de plantain nutritive, sans gluten, excellente alternative pour les régimes spéciaux.</p>
+                            <div class="product-details">
+                                <p><strong>Conditionnement:</strong> Sacs de 10kg, 25kg</p>
+                                <p><strong>MOQ:</strong> 500 kg</p>
+                                <p><strong>Export:</strong> Disponible</p>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-small">Demander un devis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Épices & Condiments -->
+            <div id="epices" class="category-section">
+                <h2 class="category-title"><i class="fas fa-pepper-hot"></i> Épices & Condiments</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="epices">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-pepper-hot"></i>
+                            </div>
+                            <span class="product-badge">Premium</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Piment Africain</h3>
+                            <p class="product-origin"><i class="fas fa-map-marker-alt"></i> Cameroun</p>
+                            <p class="product-description">Piment séché de qualité supérieure, saveur authentique et puissante.</p>
+                            <div class="product-details">
+                                <p><strong>Conditionnement:</strong> Sacs de 5kg, 10kg</p>
+                                <p><strong>MOQ:</strong> 100 kg</p>
+                                <p><strong>Export:</strong> Disponible</p>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-small">Demander un devis</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="epices">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-mortar-pestle"></i>
+                            </div>
+                            <span class="product-badge">Artisanal</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Mélange d'Épices Traditionnelles</h3>
+                            <p class="product-origin"><i class="fas fa-map-marker-alt"></i> Cameroun</p>
+                            <p class="product-description">Mélange authentique d'épices camerounaises pour sublimer vos plats.</p>
+                            <div class="product-details">
+                                <p><strong>Conditionnement:</strong> Sachets de 100g, 500g</p>
+                                <p><strong>MOQ:</strong> 50 kg</p>
+                                <p><strong>Export:</strong> Disponible</p>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-small">Demander un devis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Céréales & Riz -->
+            <div id="cereales" class="category-section">
+                <h2 class="category-title"><i class="fas fa-seedling"></i> Céréales & Riz Local</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="cereales">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-seedling"></i>
+                            </div>
+                            <span class="product-badge">Local</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Riz Local Paddy</h3>
+                            <p class="product-origin"><i class="fas fa-map-marker-alt"></i> Cameroun</p>
+                            <p class="product-description">Riz local de qualité, cultivé au Cameroun, saveur authentique.</p>
+                            <div class="product-details">
+                                <p><strong>Conditionnement:</strong> Sacs de 50kg</p>
+                                <p><strong>MOQ:</strong> 5 tonnes</p>
+                                <p><strong>Export:</strong> Disponible</p>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-small">Demander un devis</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="cereales">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-wheat"></i>
+                            </div>
+                            <span class="product-badge">Bio</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Sorgho</h3>
+                            <p class="product-origin"><i class="fas fa-map-marker-alt"></i> Cameroun</p>
+                            <p class="product-description">Sorgho de qualité, céréale nutritive et polyvalente.</p>
+                            <div class="product-details">
+                                <p><strong>Conditionnement:</strong> Sacs de 25kg, 50kg</p>
+                                <p><strong>MOQ:</strong> 2 tonnes</p>
+                                <p><strong>Export:</strong> Disponible</p>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-small">Demander un devis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produits Transformés -->
+            <div id="transformes" class="category-section">
+                <h2 class="category-title"><i class="fas fa-box"></i> Produits Transformés</h2>
+                <div class="products-grid">
+                    <div class="product-card" data-category="transformes">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-cookie-bite"></i>
+                            </div>
+                            <span class="product-badge">Valeur ajoutée</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Biscuits à base de Farine Locale</h3>
+                            <p class="product-origin"><i class="fas fa-map-marker-alt"></i> Cameroun</p>
+                            <p class="product-description">Biscuits artisanaux fabriqués avec des farines locales de qualité.</p>
+                            <div class="product-details">
+                                <p><strong>Conditionnement:</strong> Cartons de 24 paquets</p>
+                                <p><strong>MOQ:</strong> 100 cartons</p>
+                                <p><strong>Export:</strong> Disponible</p>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-small">Demander un devis</a>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="transformes">
+                        <div class="product-image">
+                            <div class="image-placeholder">
+                                <i class="fas fa-jar"></i>
+                            </div>
+                            <span class="product-badge">Nouveau</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Pâte d'Arachide</h3>
+                            <p class="product-origin"><i class="fas fa-map-marker-alt"></i> Cameroun</p>
+                            <p class="product-description">Pâte d'arachide 100% naturelle, riche en protéines.</p>
+                            <div class="product-details">
+                                <p><strong>Conditionnement:</strong> Pots de 500g, 1kg</p>
+                                <p><strong>MOQ:</strong> 200 kg</p>
+                                <p><strong>Export:</strong> Disponible</p>
+                            </div>
+                            <a href="contact.html" class="btn btn-primary btn-small">Demander un devis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Intéressé par Nos Produits ?</h2>
+                <p>Contactez-nous pour obtenir un devis personnalisé</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">Demander un devis</a>
+                    <a href="sourcing.html" class="btn btn-outline btn-large">Sourcing personnalisé</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MBAAL.COM</h3>
+                    <p>ETS MBA & AL - Commerce Général, Import-Export & Sourcing Africain</p>
+                    <p><strong>Siège:</strong> Douala, Cameroun</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Nos Services</h4>
+                    <ul>
+                        <li><a href="import-export.html">Import-Export</a></li>
+                        <li><a href="activities.html">Négoce & Intermédiation</a></li>
+                        <li><a href="activities.html">Distribution Agro-alimentaire</a></li>
+                        <li><a href="sourcing.html">Sourcing Cameroun</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="products.html">Nos Produits</a></li>
+                        <li><a href="partners.html">Devenir Partenaire</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-envelope"></i> contact@mbalnet.com</li>
+                        <li><i class="fas fa-phone"></i> +237 XXX XXX XXX</li>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp Business</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Douala, Cameroun</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MBAAL.COM - ETS MBA & AL. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="legal.html">Mentions légales</a>
+                    <a href="privacy.html">Politique de confidentialité</a>
+                    <a href="terms.html">Conditions générales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

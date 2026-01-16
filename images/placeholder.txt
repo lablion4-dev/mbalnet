@@ -1,0 +1,23 @@
+MBAAL.COM - Images Placeholder
+
+Ce dossier contient les images du site web.
+
+Images nécessaires:
+- farine-manioc.jpg (400x300px)
+- epices.jpg (400x300px)
+- cereales.jpg (400x300px)
+- transformes.jpg (400x300px)
+- logo-mbalnet.png (200x200px)
+
+Note: Les images actuelles sont des placeholders CSS.
+Remplacez-les par de vraies images de produits pour un rendu professionnel.
+
+Formats recommandés:
+- JPG pour les photos de produits
+- PNG pour les logos et icônes
+- WebP pour une meilleure performance web
+
+Dimensions recommandées:
+- Images produits: 800x600px
+- Images hero: 1920x1080px
+- Logos: 400x400px (PNG transparent)

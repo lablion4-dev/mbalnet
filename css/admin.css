@@ -1,0 +1,310 @@
+/* ===================================
+   MBAALNET ADMIN PANEL - Styles
+   =================================== */
+
+:root {
+    /* Couleurs Admin */
+    --admin-primary: #2d7a3e;
+    --admin-secondary: #1e5a8e;
+    --admin-accent: #d4af37;
+    --admin-dark: #1a202c;
+    --admin-light: #f7fafc;
+    --admin-gray: #4a5568;
+    --admin-border: #e2e8f0;
+
+    /* Espacements */
+    --admin-spacing-xs: 0.5rem;
+    --admin-spacing-sm: 1rem;
+    --admin-spacing-md: 1.5rem;
+    --admin-spacing-lg: 2rem;
+    --admin-spacing-xl: 3rem;
+
+    /* Bordures */
+    --admin-radius: 8px;
+    --admin-radius-lg: 12px;
+
+    /* Ombres */
+    --admin-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --admin-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================================
+   LOGIN PAGE
+   =================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--admin-primary) 0%, var(--admin-secondary) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 600px;
+    background: var(--admin-light);
+    border-radius: var(--admin-radius-lg);
+    box-shadow: var(--admin-shadow-lg);
+    overflow: hidden;
+}
+
+.login-card {
+    flex: 1;
+    padding: var(--admin-spacing-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: var(--admin-spacing-xl);
+}
+
+.logo h1 {
+    color: var(--admin-primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--admin-spacing-xs);
+}
+
+.logo p {
+    color: var(--admin-gray);
+    font-size: 0.9rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--admin-spacing-md);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    gap: var(--admin-spacing-xs);
+    font-weight: 600;
+    color: var(--admin-dark);
+    margin-bottom: var(--admin-spacing-xs);
+    font-size: 0.9rem;
+}
+
+.form-group label i {
+    color: var(--admin-primary);
+    width: 16px;
+}
+
+.form-group input {
+    padding: var(--admin-spacing-sm) var(--admin-spacing-md);
+    border: 2px solid var(--admin-border);
+    border-radius: var(--admin-radius);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 3px rgba(45, 122, 62, 0.1);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: var(--admin-spacing-sm) 0;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: var(--admin-spacing-xs);
+    font-size: 0.9rem;
+    color: var(--admin-gray);
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: var(--admin-primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
+    background: linear-gradient(135deg, var(--admin-primary), #4a9d5f);
+    color: white;
+    border: none;
+    padding: var(--admin-spacing-md);
+    border-radius: var(--admin-radius);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--admin-spacing-xs);
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--admin-shadow-lg);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: var(--admin-spacing-xl);
+    padding-top: var(--admin-spacing-md);
+    border-top: 1px solid var(--admin-border);
+}
+
+.login-footer p {
+    color: var(--admin-gray);
+    font-size: 0.8rem;
+}
+
+.login-bg {
+    flex: 1;
+    background: linear-gradient(135deg, var(--admin-primary) 0%, var(--admin-secondary) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--admin-spacing-xl);
+}
+
+.bg-content {
+    color: white;
+    text-align: center;
+}
+
+.bg-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--admin-spacing-md);
+    font-weight: 700;
+}
+
+.bg-content p {
+    font-size: 1.1rem;
+    margin-bottom: var(--admin-spacing-xl);
+    opacity: 0.9;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--admin-spacing-md);
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: var(--admin-spacing-sm);
+    padding: var(--admin-spacing-sm);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--admin-radius);
+    backdrop-filter: blur(10px);
+}
+
+.feature i {
+    font-size: 1.5rem;
+    color: var(--admin-accent);
+}
+
+.feature span {
+    font-weight: 500;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        margin: var(--admin-spacing-md);
+        min-height: auto;
+    }
+
+    .login-card {
+        max-width: none;
+        padding: var(--admin-spacing-lg);
+    }
+
+    .login-bg {
+        display: none;
+    }
+
+    .bg-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: var(--admin-spacing-md);
+    }
+
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    .bg-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .features {
+        gap: var(--admin-spacing-sm);
+    }
+
+    .feature {
+        padding: var(--admin-spacing-xs);
+    }
+}
+
+/* ===================================
+   ANIMATIONS
+   =================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.login-bg {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
