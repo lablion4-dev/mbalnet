@@ -571,8 +571,13 @@
    =================================== */
 
 @media (max-width: 768px) {
+    .page-header {
+        padding: 3rem 0 2rem;
+    }
+
     .page-header h1 {
         font-size: 2rem;
+        margin-bottom: 2rem;
     }
 
     .about-content {
