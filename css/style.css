@@ -93,9 +93,6 @@ a {
     gap: var(--spacing-sm);
     margin: 0;
     padding: 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .nav-right {
@@ -119,13 +116,6 @@ a {
     font-size: 0.75rem;
     color: var(--dark-gray);
     margin-top: -5px;
-}
-
-.nav-menu {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    gap: var(--spacing-sm);
 }
 
 .nav-menu a {
@@ -851,13 +841,9 @@ section {
         flex-direction: column;
         text-align: center;
     }
-
+    
     .cta-content h2 {
         font-size: 1.75rem;
-    }
-
-    .nav-right {
-        display: none;
     }
 
     .mobile-menu-toggle {
